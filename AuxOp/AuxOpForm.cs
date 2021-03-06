@@ -9,6 +9,7 @@ namespace EasyOp
         public AuxOpForm()
         {
             InitializeComponent();
+            AuxOp.CreateMacros();
             UpdateWholeView();
         }
 
