@@ -25,7 +25,7 @@ namespace EasyOp
 
         private void TextBox_TextChanged(object sender, EventArgs e)
         {
-            this.confirmButton.Enabled = textBox.Text.Length > 0 && AuxOp.Macros.MacroTable.ContainsKey(textBox.Text);
+            this.confirmButton.Enabled = textBox.Text.Length > 0 && !AuxOp.Macros.MacroTable.ContainsKey(textBox.Text);
         }
     }
 }
