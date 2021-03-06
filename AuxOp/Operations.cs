@@ -35,10 +35,10 @@ namespace EasyOp
                 case Oprands.CheckBoxCheck:
                     action = (control, parameter) => (control as CheckBox).Checked = (bool)parameter;
                     break;
-                case Oprands.ComboboxSelectItem:
+                case Oprands.ComboBoxSelectItem:
                     action = (control, parameter) => (control as ComboBox).SelectedItem = parameter;
                     break;
-                case Oprands.ComboboxSelectIndex:
+                case Oprands.ComboBoxSelectIndex:
                     action = (control, parameter) => (control as ComboBox).SelectedIndex = (int)parameter;
                     break;
                 default:
@@ -76,8 +76,8 @@ namespace EasyOp
             }
             else if (type == typeof(ComboBox))
             {
-                set.Add(Oprands.ComboboxSelectItem);
-                set.Add(Oprands.ComboboxSelectIndex);
+                set.Add(Oprands.ComboBoxSelectItem);
+                set.Add(Oprands.ComboBoxSelectIndex);
             }
             else if (type == typeof(CheckBox))
             {

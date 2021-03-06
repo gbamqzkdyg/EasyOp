@@ -7,7 +7,9 @@
         RadioButtonClick,
         CheckBoxCheck,
         TextBoxSetText,
-        ComboboxSelectItem,
-        ComboboxSelectIndex,
+        ComboBoxSelectItem,
+        ComboBoxSelectIndex,
+        ListBoxSelectItem,
+        ListBoxSelectIndex,
     }
 }
