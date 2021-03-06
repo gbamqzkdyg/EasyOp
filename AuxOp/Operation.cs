@@ -33,6 +33,7 @@ namespace EasyOp
 
         public void Perform()
         {
+            if (Oprand == Oprands.NoOp) return;
             Operations.GetAction(Oprand)(AuxOp.ControlsManager.Controls[ControlName], Parameter);
             Thread.Sleep(WaitTime);
         }
