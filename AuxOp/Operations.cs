@@ -41,6 +41,13 @@ namespace EasyOp
                 case Oprands.ComboBoxSelectIndex:
                     action = (control, parameter) => (control as ComboBox).SelectedIndex = (int)parameter;
                     break;
+                case Oprands.ListBoxSelectItem:
+                    action = (control, parameter) => (control as ListBox).SelectedItem = parameter;
+                    break;
+                case Oprands.ListBoxSelectIndex:
+                    action = (control, parameter) => (control as ListBox).SelectedIndex = (int)parameter;
+                    break;
+
                 default:
                     throw new NotImplementedException("Operation not implemented");
             }
@@ -82,6 +89,11 @@ namespace EasyOp
             else if (type == typeof(CheckBox))
             {
                 set.Add(Oprands.CheckBoxCheck);
+            }
+            else if (type == typeof(ListBox))
+            {
+                set.Add(Oprands.ListBoxSelectIndex);
+                set.Add(Oprands.ListBoxSelectItem);
             }
             TypeOpsTable[type] = set;
             return set;
