@@ -33,19 +33,19 @@ namespace EasyOp
                     action = (control, parameter) => (control as TextBox).Text = (string)parameter;
                     break;
                 case Oprands.CheckBoxCheck:
-                    action = (control, parameter) => (control as CheckBox).Checked = (bool)parameter;
+                    action = (control, parameter) => (control as CheckBox).Checked = bool.Parse((string)parameter);
                     break;
                 case Oprands.ComboBoxSelectItem:
                     action = (control, parameter) => (control as ComboBox).SelectedItem = parameter;
                     break;
                 case Oprands.ComboBoxSelectIndex:
-                    action = (control, parameter) => (control as ComboBox).SelectedIndex = (int)parameter;
+                    action = (control, parameter) => (control as ComboBox).SelectedIndex = (int.Parse((string)parameter));
                     break;
                 case Oprands.ListBoxSelectItem:
                     action = (control, parameter) => (control as ListBox).SelectedItem = parameter;
                     break;
                 case Oprands.ListBoxSelectIndex:
-                    action = (control, parameter) => (control as ListBox).SelectedIndex = (int)parameter;
+                    action = (control, parameter) => (control as ListBox).SelectedIndex = (int.Parse((string)parameter));
                     break;
 
                 default:
