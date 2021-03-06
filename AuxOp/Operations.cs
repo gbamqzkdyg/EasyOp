@@ -20,6 +20,9 @@ namespace EasyOp
             Action<object, object> action = null;
             switch (oprand)
             {
+                case Oprands.NoOp:
+                    action = (a, b) => { };
+                    break;
                 case Oprands.ButtonClick:
                     action = (control, _) => (control as Button).PerformClick();
                     break;

@@ -53,7 +53,7 @@ namespace EasyOp
         {
             if (controlListBox.SelectedItem == null) return;
             UpdateOprandListBox();
-            ValidateInput();
+            this.confirmButton.Enabled = ValidateInput();
         }
 
         private bool ValidateInput()

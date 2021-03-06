@@ -13,7 +13,7 @@ namespace EasyOp
         public HashSet<string> OpNames { get; } = new HashSet<string>();
 
         [JsonProperty]
-        public List<Operation> Ops { get; } = new List<Operation>();
+        public List<Operation> Ops { get; }
 
         public void Add(string operationName, Oprands oprand, string controlName, object parameter, int waitTime = Operations.defaultWaitTime)
         {
@@ -23,6 +23,8 @@ namespace EasyOp
         public Macro(string name)
         {
             this.Name = name;
+            this.Ops = new List<Operation>();
+            Ops.Add(new Operation("NoOp", "N/A", "N/A", Oprands.NoOp, 0));
         }
 
         public void Add(Operation op)

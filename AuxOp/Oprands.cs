@@ -2,6 +2,7 @@
 {
     public enum Oprands
     {
+        NoOp,
         ButtonClick,
         ToolStripMenuItemClick,
         RadioButtonClick,
