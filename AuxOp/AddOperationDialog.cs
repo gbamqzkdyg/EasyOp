@@ -36,7 +36,7 @@ namespace EasyOp
         {
             waitingTime = int.Parse(waitingTimeTextBox.Text);
             this.AddToDgv(new Operation(this.nameTextBox.Text, CurrentControlName,
-                new object[] { objectsTextBox.Text }, (Oprands)oprandListBox.SelectedItem, waitingTime));
+                objectsTextBox.Text, (Oprands)oprandListBox.SelectedItem, waitingTime));
             this.Close();
         }
 
